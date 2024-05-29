@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-screen" class="screen">
+        <div class="content">
+            <h1>Welcome to Tic-Tac-Toe</h1>
+            <button id="start-button" class="btn">Start Game</button>
+        </div>
+    </div>
+    <div id="input-screen" class="screen hidden">
+        <div class="content">
+            <h2>Setup Game</h2>
+            <form id="game-setup-form">
+                <label for="grid-size">Grid Size (3-10):</label>
+                <input type="number" id="grid-size" name="grid-size" min="3" max="10" required>
+                <label for="win-streak">Win Streak (3 to Grid Size):</label>
+                <input type="number" id="win-streak" name="win-streak" min="3" required>
+                <button type="submit" class="btn">Start Game</button>
+            </form>
+        </div>
+    </div>
+    <div id="game-screen" class="screen hidden">
+        <div id="game-container">
+            <!-- Game grid will be generated here dynamically -->
+        </div>
+        <button id="new-game-button" class="btn">Start New Game</button>
+    </div>
+    <div id="win-message" class="screen hidden">
+        <div class="content">
+            <h1 id="win-text"></h1>
+            <button id="restart-button" class="btn">Restart Game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

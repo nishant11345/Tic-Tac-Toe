@@ -1,0 +1,216 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+#game-container {
+    border: 2px solid #333;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 80px;
+    height: 60px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cell:hover {
+    background-color: #444;
+    color: #ffeb3b;
+}
+
+.content {
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button styles */
+.btn {
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff784e;
+    transform: scale(1.05);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+/* Input field styles */
+input[type="number"] {
+    width: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #ff5722;
+    outline: none;
+}
+
+/* Win message styles */
+#win-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s;
+}
+
+#win-text {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+    animation: textGlow 1s infinite alternate;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#win-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 1s;
+}
+
+#win-text {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffeb3b;
+    animation: textGlow 1s infinite alternate;
+}
+
+#restart-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#restart-button:hover {
+    background-color: #ff784e;
+    transform: scale(1.05);
+}
+
+/* Animation for win message text */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b;
+    }
+    100% {
+        text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b;
+    }
+}
+
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+ 
+    .cell {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        background-color: #222;
+        color: #fff;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    
+
+    .btn {
+        width: 100%; /* Make buttons full-width */
+        margin-top: 10px; /* Add some spacing between buttons */
+    }
+
+    input[type="number"] {
+        width: 100%; /* Make input fields take 80% width */
+    }
+}
